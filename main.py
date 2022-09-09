@@ -152,53 +152,53 @@ def send_message(to_user, access_token, region_name, weather, temp, feelsLike, v
         "data": {
             "date": {
                 "value": "{} {}".format(today, week),
-                "color": get_color()
+#                 "color": get_color()
             },
             "region": {
                 "value": region_name,
-                "color": get_color()
+#                 "color": get_color()
             },
             "weather": {
                 "value": weather,
-                "color": get_color()
+#                 "color": get_color()
             },
             "temp": {
                 "value": temp,
-                "color": get_color()
+#                 "color": get_color()
             },
             "feelsLike": {
                 "value": feelsLike,
-                "color": get_color()
+#                 "color": get_color()
             },
             "vis": {
                 "value": vis,
-                "color": get_color()
+#                 "color": get_color()
             },
             "precip": {
                 "value": precip,
-                "color": get_color()
+#                 "color": get_color()
             },
             "wind_dir": {
                 "value": wind_dir,
-                "color": get_color()
+#                 "color": get_color()
 
             },
             "pressure": {
                 "value": pressure,
-                "color": get_color()
+#                 "color": get_color()
             },
             "love_day": {
                 "value": love_days,
-                "color": get_color()
+#                 "color": get_color()
             },
             "note_en": {
                 "value": note_en,
-                "color": get_color()
+#                 "color": get_color()
 
             },
             "note_ch": {
                 "value": note_ch,
-                "color": get_color()
+#                 "color": get_color()
 
             }
         }
@@ -211,7 +211,9 @@ def send_message(to_user, access_token, region_name, weather, temp, feelsLike, v
         else:
             birthday_data = "距离{}的生日还有{}天".format(value["name"], birth_day)
         # 将生日数据插入data
-        data["data"][key] = {"value": birthday_data, "color": get_color()}
+        data["data"][key] = {"value": birthday_data, 
+#                              "color": get_color()
+                            }
     headers = {
         'Content-Type': 'application/json',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
