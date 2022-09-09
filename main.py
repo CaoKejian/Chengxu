@@ -190,7 +190,6 @@ def send_message(to_user, access_token, region_name, weather, temp, feelsLike, v
             "love_day": {
                 "value": love_days,
 #                 "color": get_color()
-                   "color":#78bb7b
             },
             "note_en": {
                 "value": note_en,
